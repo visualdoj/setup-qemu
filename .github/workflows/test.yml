@@ -1,0 +1,16 @@
+name: Test setup-qemu
+
+on: [push, pull_request]
+
+jobs:
+  Test:
+    runs-on: ${{ matrix.host }}
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        host: [windows-latest, ubuntu-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: .
