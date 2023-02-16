@@ -6,7 +6,7 @@ A github action for installing [QEMU](https://www.qemu.org/). Works on Linux, Wi
 
 ```yaml
       - name: Setup QEMU
-        uses: visualdoj/setup-qemu@main
+        uses: visualdoj/setup-qemu@v1
 
       - name: Run QEMU
         run:  qemu-system-x86_64 --version
