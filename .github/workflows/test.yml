@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.
       - if: runner.os == 'Linux'
-        run:  compgen -c | grep qemu
+        run:  compgen -c
       - if: runner.os == 'Windows'
         run:  ls -R C:/msys64
       - run:  qemu-system-x86_64 --version

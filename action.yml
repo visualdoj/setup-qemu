@@ -7,7 +7,7 @@ runs:
 
     - if: runner.os == 'Linux'       # https://www.qemu.org/download/#linux
       shell: bash
-      run: sudo apt-get install qemu
+      run: sudo apt-get install qemu qemu-system
 
     - if: runner.os == 'macOS'       # https://www.qemu.org/download/#macos
       shell: bash
