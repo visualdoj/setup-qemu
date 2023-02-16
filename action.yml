@@ -18,4 +18,3 @@ runs:
       run: |
           C:/msys64/usr/bin/yes.exe | C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
           echo "C:\msys64\ucrt64\bin" >> $GITHUB_PATH
-          cat $GITHUB_PATH
