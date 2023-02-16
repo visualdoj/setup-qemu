@@ -6,13 +6,17 @@ runs:
     - uses: actions/checkout@v3
 
     - if: runner.os == 'Linux'       # https://www.qemu.org/download/#linux
+      shell: bash
       run: sudo apt-get install qemu
 
     - if: runner.os == 'macOS'       # https://www.qemu.org/download/#macos
+      shell: bash
       run: brew update && brew install qemu
 
     - if: runner.os == 'Windows'
-      run: ls -R C:\msys64
+      shell: bash
+      run: ls -R C:/msys64
 
     - if: runner.os == 'Windows'     # https://www.qemu.org/download/#windows
-      run: C:\msys64\usr\bin\pacman.exe -S mingw-w64-ucrt-x86_64-qemu
+      shell: bash
+      run: C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
