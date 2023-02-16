@@ -19,4 +19,4 @@ runs:
 
     - if: runner.os == 'Windows'     # https://www.qemu.org/download/#windows
       shell: bash
-      run: C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
+      run: C:/msys64/usr/bin/yes.exe | C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
