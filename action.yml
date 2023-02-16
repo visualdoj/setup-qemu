@@ -13,10 +13,9 @@ runs:
       shell: bash
       run: brew update && brew install qemu
 
-    - if: runner.os == 'Windows'
-      shell: bash
-      run: ls -R C:/msys64
-
     - if: runner.os == 'Windows'     # https://www.qemu.org/download/#windows
       shell: bash
-      run: C:/msys64/usr/bin/yes.exe | C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
+      run: |
+          C:/msys64/usr/bin/yes.exe | C:/msys64/usr/bin/pacman.exe -S mingw-w64-ucrt-x86_64-qemu
+          echo "C:\msys64\ucrt64\bin" >> $GITHUB_PATH
+          cat $GITHUB_PATH
